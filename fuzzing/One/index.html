@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>   
+        log = [];
+        let anchor = document.createElement("a");
+
+        for (let i=0; i<=0x10ffff; i++){
+            anchor.href = `javascript${String.fromCodePoint(i)}:`;
+            if(anchor.protocol === 'javascript:') {
+                log.push(i);
+            }
+        }
+        console.log('javascript${String.fromCodePoint(i)}:')
+        console.log(log)
+        console.log(JSON.stringify(log.map(x => String.fromCodePoint(x))));
+
+        log = [];
+
+        for (let i=0; i<=0x10ffff; i++){
+            anchor.href = `${String.fromCodePoint(i)}javascript:`;
+            if(anchor.protocol === 'javascript:') {
+                log.push(i);
+            }
+        }
+        console.log('${String.fromCodePoint(i)}javascript:')
+        console.log(log)
+        console.log(JSON.stringify(log.map(x => String.fromCodePoint(x))));
+
+        log = [];
+
+        for (let i=0; i<=0x10ffff; i++){
+            anchor.href = `jave${String.fromCodePoint(i)}script:`;
+            if(anchor.protocol === 'javascript:') {
+                log.push(i);
+            }
+        }
+        console.log('jave${String.fromCodePoint(i)}script:')
+        console.log(log)
+        console.log(JSON.stringify(log.map(x => String.fromCodePoint(x))));
+    </script>
+</body>
+</html>
