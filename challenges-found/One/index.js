@@ -12,7 +12,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.post('/editProfi1e', (req, res) => {
+app.post('/editProfile', (req, res) => {
     const inputId = req.body.id;
     const userExists = users.some(user => user.id == inputId);
     if (userExists) {
@@ -34,3 +34,4 @@ app.post('/editProfi1e', (req, res) => {
 });
 
 app.listen(3000, () => console.log("Server running on port 3000"));
+
