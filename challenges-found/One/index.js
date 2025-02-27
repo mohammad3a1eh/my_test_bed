@@ -22,7 +22,7 @@ app.post('/editProfile', (req, res) => {
     }
 
 
-    const user = users.find(user => user.id == parselnt(inputld));
+    const user = users.find(user => user.id == parseInt(inputId));
     if (!user) {
         return res.status(404).send("User not found.");
     }
