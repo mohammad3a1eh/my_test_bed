@@ -16,7 +16,7 @@ app.post('/editProfile', (req, res) => {
     const inputId = req.body.id;
     const userExists = users.some(user => user.id == inputId);
     if (userExists) {
-        if (req.user.id != inputld) {
+        if (req.user.id != inputId) {
             return res.status(403).send("Forbidden: You cannot edit this profile.");
         }
     }
