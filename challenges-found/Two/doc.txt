@@ -1,0 +1,15 @@
+# install python 3 from https://www.python.org/
+
+# create env with `python -m venv venv`
+
+# active env with `.\venv\Scripts\activate` (windows)
+
+# update pip with `python.exe -m pip install --upgrade pip`
+
+# install library with `pip install flask`
+
+# run `python .\setup.py` for create database
+
+# run with `python server.py`
+
+# Hint: Bug Types is XSS , SSTI, SQL Injection 
